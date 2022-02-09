@@ -10,6 +10,7 @@
 - In the project directory, run `cargo build` (use `--release` for optimizations)
 - Then run `./target/debug/project_name`
 - Or alternatively, just run `cargo run`
+- The easiest way to run rustfmt against a project is with `cargo fmt`
 - Also, use `cargo check` to check if it compiles without producing an executable.
 
 
