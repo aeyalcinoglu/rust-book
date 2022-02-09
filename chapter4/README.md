@@ -18,6 +18,7 @@
 ## String
 - Trying to change a mutable `String` into a string literal gives the error `` expected struct `String`, found `&str` ``.
 - A `String` is made up of three parts: a pointer to the memory that holds the contents of the string, a length, and a capacity. This group of data is stored on the stack.
+- `String` type is **not** on the heap, it is a fixed size struct and lives on stack unless you box it. What is at heap is the *str*, which is the object *String* stores a pointer to. 
 
 ## Memory and Allocation
 - There are two jobs for the data on the heap: The memory must be requested from the memory allocator at runtime, and this memory must be returned to the allocator when we're done.
@@ -28,3 +29,26 @@
 ## Functions
 - The semantics for passing a value to a function are similar to those for assigning a value to a variable.
 - Returning values can also transfer ownership.
+- The macros, e.g. `println!`, implicitly take a reference to any arguments to be formatted.
+
+# References and Borrowing
+- A *reference* is like a pointer in that it’s an address we can follow to access data stored at that address that is owned by some other variable. Unlike a pointer, a reference is guaranteed to point to a valid value of a particular type.
+- The `&var` syntax lets us create a reference that refers to the value of `var` but does not own it.
+- We call the action of creating a reference *borrowing*.
+- Just as variables are immutable by default, so are references.
+- Given a reference to some data, the compiler will ensure that the data will not go out of scope before the reference to the data does.
+
+## The Rules of References
+- At any given time, you can have *either* one mutable reference *or* any number of immutable references.
+- References must always be valid.
+
+# The Slice Type
+- *Slices* let you reference a contiguous sequence of elements in a collection rather than the whole collection. A slice is a kind of reference, so it does not have ownership.
+- A *string slice* is a reference to part of a `String`.
+- Internally, the slice data structure stores the starting position and the length of the slice.
+
+| ![figure04-06](figure04-06.png)
+|:--:| 
+| Figure 4-6 from the book: String slice referring to part of a `String`|
+
+- `str` is an immutable sequence of UTF-8 bytes of dynamic length somewhere in memory. Since the size is unknown, one can only handle it behind a pointer. This means that `str` most commonly appears as `&str`.
