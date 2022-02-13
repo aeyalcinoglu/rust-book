@@ -19,3 +19,4 @@
 - Using a `!` means that you’re calling a macro instead of a normal function.
 - Cargo is Rust’s build system and package manager.
 - In Rust, packages of code are referred to as **crates**.
+- Use [rust-lang/rust.vim](https://github.com/rust-lang/rust.vim) as a Vim plugin.
