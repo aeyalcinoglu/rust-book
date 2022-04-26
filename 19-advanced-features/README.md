@@ -1,0 +1,14 @@
+# Unsafe Rust
+- Unsafe Rust exists because, by nature, static analysis is conservative.
+- Another reason Rust has an unsafe alter ego is that the underlying computer hardware is inherently unsafe.
+- There are 5 *unsafe superpowers*:
+	- Dereference a raw pointer
+	- Call an unsafe function or method
+	- Access or modify a mutable static variable
+	- Implement an unsafe trait
+	- Access fields of `union`s
+- To interact with code written in another language, Rust has a keyword, `extern`, that facilitates the creation and use of a *Foreign Function Interface (FFI)*.
+- Difference between constants and immutable static variables is that values in a static variable have a fixed address in memory.
+- Accessing and modifying mutable static variables is *unsafe*.
+- See [the reference on union](https://doc.rust-lang.org/stable/reference/items/unions.html).
+- Using `unsafe` to take one of the five actions (superpowers) just discussed isn’t wrong or even frowned upon, but it is trickier.
