@@ -8,7 +8,8 @@ Unlike the built-in array and tuple types, the data that the collections in the 
 - The method `to_string` is available on any type that implements the `Display` trait, as string literals do.
 - Compiler can coerce the `&String` argument into a `&str`.
 - A `String` is a wrapper over a `Vec<u8>`.
-- An index into the string’s bytes will not always correlate to a valid Unicode scalar value. Rust doesn’t allow us to index into a `String` to get a character.- One can iterate over strings via `.char()` or `.bytes()`.
+- An index into the string’s bytes will not always correlate to a valid Unicode scalar value. Rust doesn’t allow us to index into a `String` to get a character.
+- One can iterate over strings via `char()` or `bytes()`.
 
 # Hash Maps
 - Like vectors, hash maps are homogeneous: all of the keys must have the same type, and all of the values must have the same type.

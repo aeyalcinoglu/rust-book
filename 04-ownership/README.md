@@ -6,7 +6,7 @@
 
 ## The Stack and the Heap
 - They are parts of memory available at runtime.
-- Stack does *fifo*. All data stored on the stack must have a known, fixed size.
+- Stack does *lifo*. All data stored on the stack must have a known, fixed size.
 - The heap is less organized: The memory allocator finds an empty spot in the heap, marks it, returns a *pointer*, the address of that location. This process is called *allocating*.
 - Pushing to the stack is faster than allocating on the heap. Accessing data in the heap is slower.
 
