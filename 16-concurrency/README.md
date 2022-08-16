@@ -22,7 +22,7 @@
 	- `` the trait `Send` is not implemented for `Rc<Mutex<i32>>` ``
 - *A* in `Arc<T>` stands for *atomic*, meaning it's an *atomically reference counted* type.
 - `Mutex<T>` provides interior mutability, as the `Cell` family does.
-- `Mutex<T>` comes with the risk of creating deadlocks. hese occur when an operation needs to lock two resources and two threads have each acquired one of the locks, causing them to wait for each other forever.
+- `Mutex<T>` comes with the risk of creating deadlocks. These occur when an operation needs to lock two resources and two threads have each acquired one of the locks, causing them to wait for each other forever.
 
 # Traits
 - Two concurrency concepts are embedded in the language: the `std::marker` traits `Sync` and `Send`.
