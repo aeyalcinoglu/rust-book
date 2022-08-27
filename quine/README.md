@@ -1,0 +1,3 @@
+- Based on an explanation by [Sonat Süer](https://twitter.com/sonatsuer).
+- See the article (Turkish) in the popular mathematics journal ["Matematik Dünyası"](https://www.matematikdunyasi.org/dizin/), 2012-IV, p63-68.
+- 177 characters.
