@@ -1,0 +1,11 @@
+export function __wbg_alert_fbbeabc2309f67cb(arg0, arg1) {
+  alert(getStringFromWasm0(arg0, arg1));
+};
+
+export function __wbg_alert_fbbeabc2309f67cb(arg0, arg1) {
+  try {
+      alert(getStringFromWasm0(arg0, arg1));
+  } finally {
+      wasm.__wbindgen_free(arg0, arg1);
+  }
+};
