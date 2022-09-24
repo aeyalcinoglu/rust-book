@@ -25,3 +25,9 @@ Reading notes for the book [Rust 🦀 and WebAssembly 🕸](https://rustwasm.git
 - The `window.requestAnimationFrame()` method tells the browser that you wish to perform an animation and requests that the browser calls a specified function to update an animation before the next repaint.
 - Generating (and allocating) a `String` in Rust and then having `wasm-bindgen` convert it to a valid JavaScript string makes unnecessary copies of the universe's cells.
 - We can directly access WebAseembly's linear memory via `memory`, which is defined in the raw wasm module `wasm_game_of_life_bg`.
+
+# Testing
+- One can have another implementation of a struct without the `#[wasm-bindgen]` attribute, in order for usage in rust without exposing it to JavaScript.
+- Rust-generated WebAssembly functions cannot return borrowed references.
+- Use `#[wasm_bindgen_test]` attribute to be able to use `wasm-pack test`.
+- Use `wasm-pack test --firefox --headless` to run the tests.
