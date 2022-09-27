@@ -27,7 +27,13 @@ Reading notes for the book [Rust 🦀 and WebAssembly 🕸](https://rustwasm.git
 - We can directly access WebAseembly's linear memory via `memory`, which is defined in the raw wasm module `wasm_game_of_life_bg`.
 
 # Testing
-- One can have another implementation of a struct without the `#[wasm-bindgen]` attribute, in order for usage in rust without exposing it to JavaScript.
+- One can have another implementation of a struct without the `#[wasm-bindgen]` attribute, in order for the usage in Rust without exposing it to JavaScript.
 - Rust-generated WebAssembly functions cannot return borrowed references.
 - Use `#[wasm_bindgen_test]` attribute to be able to use `wasm-pack test`.
 - Use `wasm-pack test --firefox --headless` to run the tests.
+
+# Debugging
+- If you don't have debug symbols enabled, then the `"name"` custom section won't be present in the compiled `.wasm` binary.
+- To enable debug symbols in "release" build, put `debug = true` in the `[profile.release]` section in `Cargo.toml`.
+- Use `web_sys` crate to get access to the `console` logging functions.
+- The `console_error_panic_hook` crate logs unexpected panics to the developer console via `console.error`. 
