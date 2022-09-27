@@ -17,3 +17,8 @@
 - In contrast to struct, if we make an enum public, all of its variants are then public.
 - Adding `use` and a path in a scope is similar to creating a symbolic link in the filesystem.
 - The idiomatic way to bring a function into scope with `use` is to bring its parent module into scope. On the other hand, when bringing in structs, enums, and other items with `use`, it’s idiomatic to specify the full path.  
+
+# Modules Cheat Sheet
+- When compiling a crate, first `lib.rs` and `main.rs` are looked, as crate root.
+- If "my_module" module is declared via `mod my_module;` in the crate root, the compiler further looks inline or at `src/garden.rs` and at `src/garden/mod.rs`.
+- This works similar with declaring submodules. For going down, use `::` syntax.

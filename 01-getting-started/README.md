@@ -20,3 +20,4 @@
 - Cargo is Rust’s build system and package manager.
 - In Rust, packages of code are referred to as **crates**.
 - Use [rust-lang/rust.vim](https://github.com/rust-lang/rust.vim) as a Vim plugin.
+- See [naming conventions](https://rust-lang.github.io/api-guidelines/naming.html).
