@@ -21,3 +21,4 @@
 - In Rust, packages of code are referred to as **crates**.
 - Use [rust-lang/rust.vim](https://github.com/rust-lang/rust.vim) as a Vim plugin.
 - See [naming conventions](https://rust-lang.github.io/api-guidelines/naming.html).
+- An *example* is nothing else but a Rust source code of a standalone executable that typically resides in a single `.rs` file. All such files should be placed in the `examples/` directory, at the same level as `src/` and the `Cargo.toml` manifest itself. One can run it by passing the `--example` flag and then the example name.
